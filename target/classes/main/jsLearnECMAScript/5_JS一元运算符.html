@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一元运算符</title>
+</head>
+<body>
+    <script>
+        //一元运算符
+
+        var num = 3;
+        var a = num++;
+        document.write(a+"<br>"); //3
+
+        var b = +3;
+        document.write(b+"<br>"); //3
+        b = -3;
+        document.write(b+"<br>"); //-3
+
+        //js会自动转换类型
+        //string 转 number
+        b = +"123";
+        document.write(b+"----type--->"+typeof(b)+"<br>"); //123----type--->number
+        b = +"123abc";
+        document.write(b+"----type--->"+typeof(b)+"<br>"); //NaN----type--->number
+        b = "abc";
+        document.write(b+"----type--->"+typeof(b)+"<br>"); //abc----type--->string
+
+        //boolean转number
+        b = + true;
+        document.write(b+"----type--->"+typeof(b)+"<br>"); //1----type--->number
+        b = - false;
+        document.write(b+"----type--->"+typeof(b)+"<br>"); //0----type--->number
+
+
+
+    </script>
+</body>
+</html>

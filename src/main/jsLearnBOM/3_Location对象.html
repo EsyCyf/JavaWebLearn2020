@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+
+</head>
+<body>
+
+    <input id="btn" type="button" value="刷新">
+
+    <input id="goPorn" type="button" value="去哪儿">
+
+
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            //刷新页面
+            location.reload();
+        }
+        alert(location.href);
+
+        var btn2 = document.getElementById("goPorn");
+        btn2.onclick = function () {
+            //刷新页面
+            location.href = "https://www.bilibili.com/";
+        }
+
+
+    </script>
+</body>
+</html>

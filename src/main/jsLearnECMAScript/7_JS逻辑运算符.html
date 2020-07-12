@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>比较运算符</title>
+</head>
+<body>
+    <script>
+        var num1 = 3;
+        var num2 = 0;
+        var num3 = NaN;
+        document.write(!!num1+"<br>"); //true
+        document.write(!!num2+"<br>"); //false
+        document.write(!!num3+"<br>"); //false
+
+        var str1 = "";
+        var str2 = "0";
+        document.write(!!str1+"<br>"); //false
+        document.write(!!str2+"<br>"); //true
+
+        var obj1 = null;
+        var obj2 = undefined;
+        document.write(!!obj1+"<br>"); //false
+        document.write(!!obj2+"<br>"); //false
+
+        if (obj1){
+            alert("obj非null")
+        }else {
+            alert("obj空")
+        }//obj空
+
+
+    </script>
+</body>
+</html>

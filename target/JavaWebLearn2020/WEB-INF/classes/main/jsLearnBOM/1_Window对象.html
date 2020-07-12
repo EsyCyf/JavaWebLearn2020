@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+    <script>
+        /*Window对象不需要创建，可以直接用window对象调用方法，也可以直接调用方法*/
+
+        //警告alert()
+        // window.alert("哈哈");
+        // alert("嘻嘻");
+
+        //用的最多confirm()
+        /*var flag = window.confirm("您是傻逼吗？");
+        if (flag){
+            document.write("不会吧");
+        }else {
+            document.write("假的吧");
+        }*/
+
+        //输入框prompt()
+        /*var context = window.prompt("请输入什么");
+        document.write(context);*/
+
+
+    </script>
+</head>
+<body>
+    <input id="openBtn" type="button" value="点击获取色图">
+    <input id="closeBtn" type="button" value="关闭色图">
+
+    <script>
+
+        //打开新窗口open()
+        var openBtn =  document.getElementById("openBtn");
+        var newWindow ;
+        openBtn.onclick=function(){
+            newWindow = open("http://localhost:63342/JavaWebLearn2020/main/jsLearnDOM/2_%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A.html?_ijt=j8kps61ip4vejhsku5m9pfjv0a");
+        };
+        //关闭窗口close()
+        var closeBtn =  document.getElementById("closeBtn");
+        closeBtn.onclick=function(){
+            newWindow.close();
+        };
+
+
+        //一次性定时
+        // setTimeout("fun()",3000);
+        var id = setTimeout(fun,3000);
+        clearTimeout(id);
+        function fun() {
+            alert('BOOOOOOOOOOOOOOOOOOOOOOM');
+            open("http://localhost:63342/JavaWebLearn2020/main/jsLearnDOM/2_%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A.html?_ijt=j8kps61ip4vejhsku5m9pfjv0a");
+        }
+
+        //循环定时器
+        // setInterval(fun,2000);
+
+    </script>
+</body>
+</html>

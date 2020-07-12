@@ -1,0 +1,39 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<c3p0-config>
+    <!-- 默认配置，如果没有指定则使用这个配置 -->
+    <default-config>
+        <property name="user">root</property>
+        <property name="password">971234</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/mydb1</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+
+        <!--连接池参数-->
+        <!--超时时间-->
+        <property name="checkoutTimeout">30000</property>
+        <!--每个几秒检查所有连接池中的空闲连接-->
+        <property name="idleConnectionTestPeriod">30</property>
+        <!--初始化连接数量-->
+        <property name="initialPoolSize">3</property>
+        <!--连接的最大空闲时间，如果超过这个时间，某个数据库连接还没有被使用，则会断开掉这个连接如果为0，则永远不会断开连接-->
+        <!--<property name="maxIdleTime">30</property>-->
+        <!--最大连接数量-->
+        <property name="maxPoolSize">20</property>
+        <!--<property name="minPoolSize">2</property>-->
+        <property name="maxStatements">200</property>
+    </default-config>
+    <!-- 命名的配置,可以通过方法调用实现 -->
+    <named-config name="test">
+        <property name="user">root</property>
+        <property name="password">971234</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/mydb1</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">25</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+    </named-config>
+</c3p0-config>

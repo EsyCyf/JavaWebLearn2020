@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" value="<script>前">
+
+    <!--
+        内部js
+        可以定义在html任意位置
+        前后会影响执行顺序
+    -->
+    <script>
+        alert("嘻嘻嘻")
+    </script>
+
+    <input type="text" value="<script>后">
+
+    <script src="a.js"></script>
+</body>
+</html>

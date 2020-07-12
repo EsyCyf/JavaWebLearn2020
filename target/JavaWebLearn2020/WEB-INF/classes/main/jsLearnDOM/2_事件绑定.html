@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+
+</head>
+<body>
+<img width="30%" height="40%" id="porn" src="../htmlLearn/porn.png" onclick="f()">
+
+
+    <script>
+
+        var porn = document.getElementById("porn");
+        var flag = false;
+        porn.onclick = function () {
+            if (flag){
+                porn.src="../htmlLearn/porn.png";
+                flag = false;
+            }else {
+                porn.src="1.jpg";
+                flag = true;
+            }
+
+        }
+    </script>
+</body>
+</html>

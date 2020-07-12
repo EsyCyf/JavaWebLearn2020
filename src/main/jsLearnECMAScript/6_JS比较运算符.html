@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>比较运算符</title>
+</head>
+<body>
+    <script>
+        /*
+        * 1、类型相同：直接比较
+        *       *字符串：按照字典顺序 逐一比较，直到得出大小为止
+        * 2、类型不同：先转换类型，再比较
+        *       *===:全等于，先判断类型
+        * */
+
+        document.write((3>4)+"<br>"); //false
+
+        document.write(("abc">"abz")+"<br>"); //false
+
+        document.write((123=="123")+"<br>"); //true
+
+        document.write((123==="123")+"<br>"); //false
+
+
+
+    </script>
+</body>
+</html>

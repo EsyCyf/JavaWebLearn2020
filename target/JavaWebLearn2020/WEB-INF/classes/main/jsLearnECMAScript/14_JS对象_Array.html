@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        //创建方式
+        var arr1 = new Array(1,2,3);
+        var arr2 = new Array(5);
+        var arr3 = [1,2,3,4];
+        var arr4 = new Array();
+
+        document.write(arr1+"<br>"); //1,2,3
+        document.write(arr2+"<br>"); //,,,,
+        document.write(arr3+"<br>"); //1,2,3,4
+        document.write(arr4+"<br>"); //
+
+        //数组类型可变
+        var arr = [1,"abc",true];
+        document.write(arr+"<br>");
+        document.write(arr[0]+"<br>");
+        document.write(arr[1]+"<br>");
+        document.write(arr[2]+"<br>");
+
+        //数组长度可变
+        arr[10] = "嘻嘻";
+        document.write(arr[10]+"<br>");
+
+        //join方法
+        document.write(arr.join("--")+"<br>"); //1--abc--true----------------嘻嘻
+
+        //push方法,添加元素到末尾
+        arr.push("push");
+        document.write(arr.join("--")+"<br>"); //1--abc--true----------------嘻嘻--push
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <img id="porn" src="1.jpg">
+
+    <script>
+        var num = 1;
+        setInterval(fun,3000);
+        function fun() {
+            var porn = document.getElementById("porn");
+            switch (num%3) {
+                case 1:
+                    porn.src = "porn.png";
+                    break;
+                case 2:
+                    porn.src = "3.png";
+                    break;
+                case 0:
+                    porn.src = "1.jpg";
+                    break;
+            }
+            num++;
+        }
+    </script>
+</body>
+</html>

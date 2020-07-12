@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global</title>
+
+    <script>
+
+        var str = "https://www.bilibili.com/嘻嘻哈哈";
+        //编码
+        var encode = encodeURI(str);
+        document.write(encode+"<br>"); //https://www.bilibili.com/%E5%98%BB%E5%98%BB%E5%93%88%E5%93%88
+        //解码
+        var s = decodeURI(encode);
+        document.write(s+"<br>"); //https://www.bilibili.com/嘻嘻哈哈
+
+        //编码更多
+        var encode1 = encodeURIComponent(str);
+        document.write(encode1+"<br>"); //https%3A%2F%2Fwww.bilibili.com%2F%E5%98%BB%E5%98%BB%E5%93%88%E5%93%88
+        //解码更多
+        var s1 = decodeURIComponent(encode1);
+        document.write(s1+"<br>"); //https://www.bilibili.com/嘻嘻哈哈
+
+        document.write("---------------------------------------------<br>");
+
+
+        //parseInt() 逐一判断是否为数字，直到不是数字
+        var str1 = "123abc123";
+        var number1 = parseInt(str1);
+        document.write(number1+"<br>"); //123
+        var str2 = "aaa123";
+        var number2 = parseInt(str2);
+        document.write(number2+"<br>"); //NaN
+
+        document.write("---------------------------------------------<br>");
+
+        //isNaN() 判断是否为NaN
+        var a = NaN;
+        document.write((a == NaN)+"<br>"); //false
+        document.write(isNaN(a)+"<br>"); //true
+
+        //eval()将字符串作为js脚本执行
+        var jscode = "alert(123)";
+        eval(jscode);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
